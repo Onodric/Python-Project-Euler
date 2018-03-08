@@ -1,8 +1,12 @@
 # Project Euler
-## Practice Algoritms
+## Practice Algoritms in PYTHON (3.6+)
 
-_refer to the [website](https://projecteuler.net/) for information_
+_Refer to the [website](https://projecteuler.net/) for information_
 
-Currently on problem 18.
+### TODO
 
-Apparently I lost problems 16 and 17. I'll do them again in typescript, c# or a django app.
+- [ ] Refactor to 3.6
+- [ ] Refactor to a library
+- [ ] Refactor to classes
+- [ ] Move out common functions
+- [ ] Currently on problem 18.
