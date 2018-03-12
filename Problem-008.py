@@ -31,7 +31,7 @@ class Problem_008:
         index = 0
         while index < len(self.__LONG_NUMBER)-slice_size:
             frame = self.__LONG_NUMBER[index:index+slice_size]
-            test = this.string_reduce(frame)
+            test = self.string_reduce(frame)
             if test > prod:
                 prod = test
             index += 1
