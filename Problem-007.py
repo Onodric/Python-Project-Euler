@@ -11,6 +11,11 @@ class Problem_007:
     prime = Primers()
 
     def find_prime(self, m):
+        """
+        Method to find the n-th prime
+        Arguments: <integer> n
+        Returns: <integer> nth prime
+        """
         counter = 0
         num = 1
         while counter < m:
