@@ -21,10 +21,10 @@ class Problem_005:
         """
 
         help = Factorize()
-        allFactors = help.getAllPrimeFactors(n)
+        allFactors = help.get_all_prime_factors(n)
 
         for current in range(n-1, stop=2, step=-1):
-            newFactors = help.getAllPrimeFactors(current)
+            newFactors = help.get_all_prime_factors(current)
             for candidate in allFactors:
                 try:
                     if newFactors.index(candidate):
