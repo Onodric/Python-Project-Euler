@@ -93,7 +93,7 @@ class Problem_011:
 		Arguments: <integer> n - the number of adjacent grid elements to multiply
 		Returns: <integer> The largest product found
 		"""
-		largest_product = 0
+		# largest_product = 0
 		return
 
 	def find_largest_forward_diagonal_product(self, n):
@@ -102,7 +102,7 @@ class Problem_011:
 		Arguments: <integer> n - the number of adjacent grid elements to multiply
 		Returns: <integer> The largest product found
 		"""
-		largest_product = 0
+		# largest_product = 0
 		return
 
 	def find_largest_backward_diagonal_product(self, n):
@@ -111,43 +111,43 @@ class Problem_011:
 		Arguments: <integer> n - the number of adjacent grid elements to multiply
 		Returns: <integer> The largest product found
 		"""
-		largest_product = 0
+		# largest_product = 0
 		return
 
-	def horz_srch(arr): # where arr is an array
-		prod = 0
-		largest = 0
-		for e in range(len(arr)): # this goes through each line
-			box_start = 0 # reset the start place to [0]
-			for i in range(len(arr[e])-4): # this goes through each element
-				prod = (arr[e][box_start] * arr[e][box_start+1] * arr[e][box_start+2] * arr[e][box_start+4])
-				if prod > largest:
-					largest = prod
-				box_start += 1 # move the box!
-		for f in range(len(arr)-3): # this is for vertical checks.
-			box_start = 0
-			for j in range(len(arr[f])):
-				prod = (arr[f][box_start] * arr[f+1][box_start] * arr[f+2][box_start] * arr[f+3][box_start])
-				if prod > largest:
-					largest = prod
-				box_start += 1
-		for g in range(len(arr)-3):
-			box_start = 0
-			for k in range(len(arr[g])-4):
-				prod = (arr[g][box_start] * arr[g+1][box_start+1] * arr[g+2][box_start+2] * arr[g+3][box_start+3])
-				if prod > largest:
-					largest = prod
-				box_start += 1
-			box_start = 3
-			for m in range(3, len(arr)):
-				prod = (arr[g][box_start] * arr[g+1][box_start-1] * arr[g+2][box_start-2] * arr[g+3][box_start-3])
-				if prod > largest:
-					largest = prod
-				box_start += 1
-		return largest
+	# def horz_srch(arr): # where arr is an array
+	# 	prod = 0
+	# 	largest = 0
+	# 	for e in range(len(arr)): # this goes through each line
+	# 		box_start = 0 # reset the start place to [0]
+	# 		for i in range(len(arr[e])-4): # this goes through each element
+	# 			prod = (arr[e][box_start] * arr[e][box_start+1] * arr[e][box_start+2] * arr[e][box_start+4])
+	# 			if prod > largest:
+	# 				largest = prod
+	# 			box_start += 1 # move the box!
+	# 	for f in range(len(arr)-3): # this is for vertical checks.
+	# 		box_start = 0
+	# 		for j in range(len(arr[f])):
+	# 			prod = (arr[f][box_start] * arr[f+1][box_start] * arr[f+2][box_start] * arr[f+3][box_start])
+	# 			if prod > largest:
+	# 				largest = prod
+	# 			box_start += 1
+	# 	for g in range(len(arr)-3):
+	# 		box_start = 0
+	# 		for k in range(len(arr[g])-4):
+	# 			prod = (arr[g][box_start] * arr[g+1][box_start+1] * arr[g+2][box_start+2] * arr[g+3][box_start+3])
+	# 			if prod > largest:
+	# 				largest = prod
+	# 			box_start += 1
+	# 		box_start = 3
+	# 		for m in range(3, len(arr)):
+	# 			prod = (arr[g][box_start] * arr[g+1][box_start-1] * arr[g+2][box_start-2] * arr[g+3][box_start-3])
+	# 			if prod > largest:
+	# 				largest = prod
+	# 			box_start += 1
+	# 	return largest
 
 if __name__ == "__main__":
 	import sys
 	solver = Problem_011()
 	arg = sys.argv[1]
-	print("The largest product of four adjacent numbers is {}.".format(solver.horz_srch(solver.full_grid)))
+	print("The largest product of four adjacent numbers is {}.".format(solver.search_all_directions(solver.full_grid)))
