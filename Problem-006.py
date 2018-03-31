@@ -16,23 +16,28 @@ class Problem_006:
     """
 
     def get_sum_of_squares_of(self, n):
+        """Finds the sum of all squares in the range 1 to n
+
+        Args:
+            n
+        Returns:
+            sum
         """
-        Method for calculating the sum of all squares in the range 1 to n
-        Arguments: <integer> n
-        Returns: <integer> sum
-        """
+
         total_sq = 0
         for e in range(1, n+1):
             total_sq += e*e
         return total_sq
 
     def get_square_of_sums_of(self, m):
+        """Finds the square of the sum of all members in the range 1 to n
+
+        Args:
+            m
+        Returns:
+            square
         """
-        Method for calculating the square of the sum of all members in the
-        range 1 to n
-        Arguments: <integer> m
-        Returns: <integer> square
-        """
+
         sq_total = 0
         for i in range(1, m+1):
             sq_total += i

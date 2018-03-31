@@ -6,10 +6,21 @@ class Problem_001:
     Find the sum of all the multiples of 3 or 5 below 1000.
     """
 
-    def sum_of_multiplpes(self, num, mult_1, mult_2):
+    def sum_of_multiples(self, limit, multiple_1, multiple_2):
+        """Finds the sum of all multiples of two numbers under a certain value
+
+        Args:
+            limit
+            multiple_1
+            multiple_2
+        Returns:
+            the sum of all multiples of either multiple_1 or multiple_2 under
+            limit
+        """
+
         sum = 0
-        for e in range(num):
-            if e % mult_1 == 0 or e % mult_2 == 0:
+        for e in range(limit):
+            if e % multiple_1 == 0 or e % multiple_2 == 0:
                 sum += e
         return sum
 
@@ -17,5 +28,5 @@ class Problem_001:
 if __name__ == "__main__":
     import sys
     solver = Problem_001()
-    print(solver.sum_of_multiplpes(
+    print(solver.sum_of_multiples(
         int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3])))

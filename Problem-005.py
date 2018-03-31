@@ -13,18 +13,20 @@ class Problem_005:
     """
 
     def getSmallestMultiple(self, n):
-        """
-        Method the returns the smallest even multiple of all the numbers below
-                a maximum value (from 1 to n)
-        Arguments: <integer> n
-                Returns: <integer> multiple
+        """Finds the smallest even multiple of all the numbers below a maximum
+            value (from 1 to n)
+
+        Args:
+            n
+        Returns:
+            multiple
         """
 
         help = Factorize()
-        allFactors = help.get_all_prime_factors(n)
+        allFactors = help.get_all_prime_factors_of(n)
 
         for current in range(n-1, stop=2, step=-1):
-            newFactors = help.get_all_prime_factors(current)
+            newFactors = help.get_all_prime_factors_of(current)
             for candidate in allFactors:
                 try:
                     if newFactors.index(candidate):

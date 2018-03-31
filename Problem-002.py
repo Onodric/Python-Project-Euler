@@ -9,12 +9,21 @@ class Problem_002:
         exceed four million, find the sum of the even-valued terms.
     """
 
-    def fibbonacci_sum_of_multiples(self, max_num, divisor):
+    def fibbonacci_sum_of_multiples(self, limit, divisor):
+        """Finds the sum of Fibonacci numbers which are multiples of a number
+
+        Args:
+            limit: the maximum value to search
+            divisor: the number whose multiples are summed
+        Returns:
+            the integer sum
+        """
+
         sum = 0
         fibbi_dig_1 = 1
         fibbi_dig_2 = 1
         place_holder = 0
-        while fibbi_dig_2 < max_num:
+        while fibbi_dig_2 < limit:
             if fibbi_dig_2 % divisor == 0:
                 sum += fibbi_dig_2
             place_holder = fibbi_dig_2

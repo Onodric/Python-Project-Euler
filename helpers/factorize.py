@@ -1,17 +1,21 @@
 import math
 
 class Factorize:
-    """
-    Class to assist in factoring
-    Methods: get_all_prime_factors, getUniquePrimeFactors, getAllFactors
+    """Assists in factoring
+
+    Methods:
+        get_all_prime_factors, getUniquePrimeFactors, getAllFactors
     """
 
-    def get_all_prime_factors(self, n):
+    def get_all_prime_factors_of(self, n):
+        """Finds all prime factors of a number
+
+        Args:
+            n: an integer o factor
+        Returns:
+            an array of all prime integer factors
         """
-        Method to return all prime factors of a number
-        Arguments: <integer> n
-        Returns: Array<integer> primeFactors
-        """
+
         primeFactors = []
         while n % 2 == 0:
             primeFactors.append(2)
@@ -24,8 +28,24 @@ class Factorize:
             primeFactors.append(n)
         return primeFactors
 
+    def get_all_factor_pairs_of(self, n):
+        """Finds all factor pairs of a number
+
+        Args:
+            n: an integer to factor
+        Returns:
+            An array of all integer factors of a number
+        """
+
+        factors = []
+        for e in range(1, int(math.sqrt(n)+1)):
+            if n % e == 0:
+                factors.append(e)
+                factors.append(n/e)
+        return factors
+
 if __name__ == "__main__":
     import sys
     solver = Factorize()
-    solved = solver.get_all_prime_factors(int(sys.argv[1]))
+    solved = solver.get_all_prime_factors_of(int(sys.argv[1]))
     print(solved)

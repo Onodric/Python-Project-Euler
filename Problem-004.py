@@ -9,12 +9,13 @@ class Problem_004:
     """
 
     def find_largest_palidromic_product_of(self, magnitude):
-        """
-        Method to find the largest palindromic number that is a product of two
-        n-digit numbers
-        Arguments: <number> n
-        Returns: <dictionary> results, containing the product and two n-digit
-        numbers
+        """Finds the largest palindromic number that is a product of two
+            n-digit numbers
+
+        Args:
+            magnitude
+        Returns:
+            a dictionary containing the product and two magnitude-digit numbers
         """
 
         largest = 10 ^ magnitude - 1
