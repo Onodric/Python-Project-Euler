@@ -10,12 +10,14 @@ class Problem_001:
         """Finds the sum of all multiples of two numbers under a certain value
 
         Args:
-            limit
-            multiple_1
-            multiple_2
+            limit (integer): upper bound of multiples of `multiple_1` and
+                `multiple_2`
+            multiple_1 (integer): a base for multiple gathering
+            multiple_2 (integer): a base for multiple gathering
+
         Returns:
-            the sum of all multiples of either multiple_1 or multiple_2 under
-            limit
+            sum (integer): sum of all multiples of both `multiple_1` or
+                `multiple_2` less then `limit`
         """
 
         sum = 0
