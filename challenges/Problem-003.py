@@ -1,5 +1,5 @@
 import math
-import factorize as f
+from helpers import factorize
 
 class Problem_003:
     """
@@ -13,12 +13,13 @@ class Problem_003:
         """Finds the largest prime factor of a given number
 
         Args:
-            number
+            number (integer) the number to factor
         Returns:
-            The largest prime factor of n
+            (integer) The largest prime factor of number
         """
 
-        factors = f.Factorize.get_all_prime_factors_of(number)
+        f = factorize.Factorize()
+        factors = f.get_all_prime_factors_of(number)
         factors.sort()
         return factors[-1]
 

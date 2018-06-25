@@ -20,7 +20,7 @@ class Factorize:
         while n % 2 == 0:
             primeFactors.append(2)
             n /= 2
-        for i in range(3, stop=math.floor(math.sqrt(n)), step=2):
+        for i in range(3, int(math.floor(math.sqrt(n))), 2):
             while n % i == 0:
                 primeFactors.append(i)
                 n /= i

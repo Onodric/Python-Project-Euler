@@ -20,6 +20,10 @@ class Problem_001:
                 `multiple_2` less then `limit`
         """
 
+        if not limit or not multiple_1 or not multiple_2:
+            return 0
+        if limit < 1 or multiple_1 < 1 or multiple_2 < 1:
+            return 0
         sum = 0
         for e in range(limit):
             if e % multiple_1 == 0 or e % multiple_2 == 0:
