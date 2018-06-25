@@ -1,1 +1,0 @@
-print divmod(1234, 1000)
