@@ -16,6 +16,8 @@ class Problem_002:
             sum (integer): sum of all fibonacci numbers less than `limit`, divisible by `divisor`
         """
 
+        if not limit or not divisor:
+            return 0
         sum = 0
         fibbi_dig_1 = 1
         fibbi_dig_2 = 1
