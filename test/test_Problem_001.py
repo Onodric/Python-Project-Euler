@@ -1,7 +1,7 @@
 import unittest
 from challenges import Problem_001
 
-class Problem_001_Spec(unittest.TestCase):
+class Test_Problem_001(unittest.TestCase):
     """The test cases for 001
 
     See Above

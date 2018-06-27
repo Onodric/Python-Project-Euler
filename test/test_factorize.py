@@ -2,7 +2,7 @@ import unittest
 from helpers import factorize
 
 
-class Problem_001_Spec(unittest.TestCase):
+class Test_Factorize(unittest.TestCase):
     """The test cases for helpers.factorize
 
     Methods:

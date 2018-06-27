@@ -2,7 +2,7 @@ import unittest
 from helpers import primers
 
 
-class Problem_001_Spec(unittest.TestCase):
+class Test_Primers(unittest.TestCase):
     """The test cases for helpers.primers
 
     See Above

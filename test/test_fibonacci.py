@@ -2,7 +2,7 @@ import unittest
 from helpers import fibonacci
 
 
-class Problem_001_Spec(unittest.TestCase):
+class Test_Fibonacci(unittest.TestCase):
     """The test cases for helpers.fibonacci
 
     See Above
