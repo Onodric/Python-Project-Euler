@@ -1,7 +1,8 @@
 import unittest
 from challenges import problem_001
 
-class Problem_001_Spec(unittest.TestCase):
+
+class Problem001Spec(unittest.TestCase):
     """The test cases for 001
 
     See Above
@@ -28,7 +29,3 @@ class Problem_001_Spec(unittest.TestCase):
         self.assertEqual(self.problem.sum_of_multiples(20, 0, 2), 0)
         self.assertEqual(self.problem.sum_of_multiples(20, 2, 0), 0)
         self.assertEqual(self.problem.sum_of_multiples(0, 10, 2), 0)
-
-
-if __name__ == "__main__":
-    unittest.main()
